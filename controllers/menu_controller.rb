@@ -68,7 +68,8 @@ require_relative '../models/address_book'
     else 
      puts "#{selection} is not a valid input"
      entry_n_submenu
-     
+    end
+   end
   # #10
    def view_all_entries
         # #14
