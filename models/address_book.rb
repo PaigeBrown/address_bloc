@@ -4,6 +4,12 @@ require "csv"
  class AddressBook
     attr_reader :entries
      
+     
+     def nuke
+      @entries = []
+     end
+     
+     
      def initialize
         @entries = []
      end
