@@ -55,8 +55,7 @@
         end
     end
   
-   # Test that AddressBook's .import_from_csv() method is working as expected
-   describe "#import_from_csv" do
+    describe "#import_from_csv" do
      it "imports the correct number of entries" do
        book.import_from_csv("entries.csv")
        book_size = book.entries.size
@@ -94,6 +93,14 @@
        check_entry(entry_five, "Sussie", "555-555-2036", "sussie@blocmail.com")
      end
    end
+   
+   context "import from entries_2.csv" do
+    it "imports the correct number of entries" do
+     book.import_from_csv("entries_2.csv")
+     
+     expect(book.entries.size).to eq 3
+    end
   end
+end
   
   
